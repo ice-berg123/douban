@@ -1,83 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="text/javascript" href="js/login.js">
-    <style>
-        #content{
-            position: absolute;
-            top:0px;
-            left:0px;
-            height: 47rem;
-            width: 94.95rem;
-        }
-        #nav{
-            position: relative;
-            width:94.95rem;
-            height:4.5rem;
-            background-color: rgb(237,244,237);
-        }
-        #nav_picture{
-            position: relative;
-            top:1rem;
-            left:16rem;
-            height: 2rem;
-            width:10rem;
-        }
-        #login-warp{
-            position: relative;
-            margin-top: 5rem;
-            width:94.95rem;
-            height: 37rem;
-        }
-        #login_left_picture{
-            position: relative;
-            width:40rem;
-            height:34rem;
-            left:14rem;
-        }
-        #login_right{
-            float:right;
-            border:1px solid rgb(216,216,216);
-            width:20rem;
-            height:26rem;
-            margin-top:3rem;
-            margin-right:23rem;
-        }
-        #left_pb{
-            position: relative;
-            top:-4rem;
-            left:32rem;
-            width:20rem;
-            height: 4rem;
-        }
-        #left_a{
-            height: 2.5rem;
-            width:8.6rem;
-            background-color: rgb(60,57,56);
-            color:white;
-            border-radius: 6px;
-            text-align: center;
-            line-height: 2.4rem;
-            font-size:small;
-        }
-        #left-p{
-            position: relative;
-            left:9rem;
-            top:-2.5rem;
-            height:2.5rem;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <div id = "content">
-        <div id = "nav"><a id="nav_a" href="index.html"><img id="nav_picture" src="pictures/login/douban_logo@2x.png" alt=""></a></div>
-        <div id="login-warp"><img id="login_left_picture" src="pictures/login/17705622af81ieohwm0.jpg" alt=""><div id="login_right"></div></div>
-        <div id="left_pb"><a href=""><div id="left_a">下载豆瓣App</div></a><img  id="left-p" src="pictures/login/ic_qr_mini_login.png" alt="IOS/Android扫码直接下载"></div>
+    <link rel="text/javascript" href="js/login.js" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="nav">
+        <a id="nav_a" href="index.html"
+          ><img id="nav_picture" src="pictures/login/douban_logo@2x.png" alt=""
+        /></a>
+      </div>
+      <div id="login-warp">
+        <img
+          id="login_left_picture"
+          src="pictures/login/17705622af81ieohwm0.jpg"
+          alt=""
+        />
+        <div id="login_right">
+          <div id="login-title">密码登录</div>
+          <input id="user_input" type="text" placeholder="手机号/邮箱" />
+          <div>
+            <input type="password" placeholder="密码" />
+            <span id="find_passwd"><a href="">找回密码</a></span>
+          </div>
+          <div id="login">豆瓣登录</div>
+        </div>
+      </div>
+      <div id="left_pb">
+        <a href=""><div id="left_a">下载豆瓣App</div></a
+        ><img
+          id="left-p"
+          src="pictures/login/ic_qr_mini_login.png"
+          alt="IOS/Android扫码直接下载"
+        />
+      </div>
     </div>
-</body>
+  </body>
+  <script>
+    async function PostData(url="", data) {
+      const response = await fetch(url, {
+        method: "POST",
+        mode:"no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: JSON.stringify(data),
+      });
+      return response;
+    }
+    PostData("http://39.106.81.229:9920/login", {
+      username: "bilbil",
+      password: 123456,
+    }).then((data) => {
+      console.log(data);
+    });
+  </script>
 </html>

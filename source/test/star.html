@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: bisque;
+        }
+        .stars{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            width:90px;
+            height: 25px;
+            border: 1px solid black;
+        }
+        .star{
+            display: inline-block;
+            width:65px;
+            height: 12px;
+            background: url("source/pictures/mix/star.png") no-repeat;
+            background-position: 0% 0%;
+            background-size:60px;
+        }
+        .star-point{
+            display: inline-block;
+            font-size: 13px;
+            color:rgb(226,144,96);
+            }
+    </style>
+    
+</head>
+<body>
+    <div class="stars">
+        <span class="star"></span><span class="star-point">4.4</span>
+    </div>
+</body>
+    <script>
+        let star_point = document.querySelector(".star-point");
+        let star = document.querySelector(".star");
+        points = star_point.textContent;
+        star.style.backgroundPosition = 0+"% " + (100-Math.round(points)*10) + "%";
+        console.log(star.style.backgroundPosition);
+    </script>
+</html>

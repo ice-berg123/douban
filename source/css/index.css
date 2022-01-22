@@ -1,39 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-.hover_font01 {
-  font-size: 0.85rem;
-  text-decoration: none;
-  color: rgb(102, 102, 153);
-}
-.hover_font02 {
-  font-size: 0.85rem;
-  text-decoration: none;
-  color: rgb(51, 140, 200);
-}
-.hover_font03 {
-  font-size: 0.85rem;
-  text-decoration: none;
-  color: rgb(155, 168, 197);
-}
-.header_font01 {
-  font-size: 1rem;
-  color: black;
-}
-.hoverall:hover {
-  background-color: rgb(34, 119, 170);
-  height: 1.1rem;
-  color: white;
-}
-.box_border {
-  margin-top: 0.7rem;
-  display: flex;
-  flex-direction: row;
-  height: 1.9rem;
-  line-height: 1rem;
-  border-bottom: 1px solid rgb(234, 234, 234);
-}
+
 #nav {
   position: relative;
   display: flex;

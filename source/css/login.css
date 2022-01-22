@@ -1,0 +1,110 @@
+#content{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 47rem;
+    width: 94.95rem;
+}
+#nav{
+    position: relative;
+    width:94.95rem;
+    height:4.5rem;
+    background-color: rgb(237,244,237);
+}
+#nav_picture{
+    position: relative;
+    top:1rem;
+    left:16rem;
+    height: 2rem;
+    width:10rem;
+}
+#login-warp{
+    position: relative;
+    margin-top: 5rem;
+    width:94.95rem;
+    height: 37rem;
+}
+#login_left_picture{
+    position: relative;
+    width:40rem;
+    height:34rem;
+    left:14rem;
+}
+#login_right{
+    float:right;
+    display: flex;
+    flex-direction: column;
+    border:1px solid rgb(216,216,216);
+    width:20rem;
+    height:26rem;
+    margin-top:3rem;
+    margin-right:23rem;
+}
+#left_pb{
+    position: relative;
+    top:-4rem;
+    left:32rem;
+    width:20rem;
+    height: 4rem;
+}
+#left_a{
+    height: 2.5rem;
+    width:8.6rem;
+    background-color: rgb(60,57,56);
+    color:white;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 2.4rem;
+    font-size:small;
+}
+#left-p{
+    position: relative;
+    left:9rem;
+    top:-2.5rem;
+    height:2.5rem;
+    text-decoration: none;
+}
+#login_right #login-title{
+    margin-top: 3rem;
+    margin-left:5rem;
+    width:9rem;
+    border-bottom: 1.5px solid black;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+#login_right input{
+    margin-left: 2rem;
+    margin-top:1.2rem;
+    outline: none;
+    width:10rem;
+    border:1px solid rgb(228,230,229);
+    height: 2rem;
+    padding-left: 0.7rem;
+    padding-right: 4rem;
+    border-radius: 0.3rem;
+}
+#login_right #find_passwd{
+    position: absolute;
+    top:14.3rem;
+    right:27rem;
+    font-size:0.8rem;
+}
+#login_right #find_passwd a{
+    text-decoration: none;
+    color: rgb(155,168,197);
+}
+#login{
+    cursor:default;
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+    margin-left: 2rem;
+    width:14.8rem;
+    background-color: rgb(65,172,82);
+    height: 2rem;
+    font-weight: 600;
+    color:white;
+    border-radius: 0.3rem;
+}

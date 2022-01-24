@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 96rem;
+  width: 100rem;
   height: 1.8rem;
   background-color: rgb(84, 86, 82);
   font-size: small;
@@ -80,7 +80,7 @@
 }
 #nav_2 {
   position: relative;
-  width: 96rem;
+  width: 100rem;
   height: 8rem;
   background-color: rgb(240, 243, 245);
 }

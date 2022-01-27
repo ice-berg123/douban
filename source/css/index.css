@@ -186,9 +186,7 @@
 #left_03 {
   height: 33rem;
 }
-#left_04 {
-  height: 21rem;
-}
+
 #left_05 {
   height: 10rem;
 }
@@ -312,6 +310,14 @@
   position: absolute;
   left: 43.5rem;
 }
+#arrowhead_2_01 {
+  position: absolute;
+  left: 41.5rem;
+}
+#arrowhead_2_02 {
+  position: absolute;
+  left: 43.5rem;
+}
 .pro {
   font-size: 0.78rem;
 }
@@ -339,4 +345,37 @@
 #left_05 div .hoverall {
   position: relative;
   margin-left: 0.9rem;
+}
+.rec_box{
+  position: relative;
+  display: flex;
+  margin-top: 1rem;
+  background-color: rgb(249,249,249);
+  left:0rem;
+  right:0rem;
+}
+.rec_box_remove{
+  transition:left 0.5s ease-in-out;
+}
+.rec_title{
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+.rec_content{
+  position: relative;
+  margin-top: 1.7rem;
+  margin-left: 2rem;
+}
+.rec_title_a{
+  text-decoration: none;
+  color: black;
+}
+#recommend{
+  position: relative;
+  display: flex;
+  right: 45.1rem;
+}
+.rec_right{
+  width: 22rem;
 }

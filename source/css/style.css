@@ -15,7 +15,7 @@
 .font03 {
     font-size: 0.85rem;
     text-decoration: none;
-    color: rgb(155, 168, 197);
+    color: rgb(153,153,153);
 }
 .header_font01 {
     font-size: 1rem;
@@ -53,4 +53,28 @@
     display: inline-block;
     font-size: 13px;
     color: rgb(226, 144, 96);
+}
+.input_style{
+    margin-left: 2rem;
+    margin-top:1.2rem;
+    outline: none;
+    width:10rem;
+    border:1px solid rgb(228,230,229);
+    height: 2rem;
+    padding-left: 0.7rem;
+    padding-right: 4rem;
+    border-radius: 0.2rem;
+}
+.button{
+    cursor:default;
+    text-align: center;
+    margin-top: 1rem;
+    line-height: 1.8rem;
+    margin-left: 2rem;
+    width:14.8rem;
+    background-color: rgb(65,172,82);
+    height: 2rem;
+    font-weight: 600;
+    color:white;
+    border-radius: 0.3rem;
 }

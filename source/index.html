@@ -8,6 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/tag_top.css">
 </head>
 
 <body>
@@ -25,9 +26,14 @@
       <a href=""><span>豆品</span></a>
     </div>
     <div id="nav_right">
-      <a href="" onmouseover="show(this)" onmouseout="show_out(this)"><span>下载豆瓣客户端</span></a>
-      <a href=""><span>登录/注册</span></a>
+      <span href="" onmouseover="show(this)" onmouseout="show_out(this)"><span>下载豆瓣客户端</span></span>
+      <span><span>登录/注册</span></span>
+      <span href="" id="username_a"></span>
     </div>
+  <div id="loginafterhover">
+    <div>个人主页</div>
+    <div>退出</div>
+  </div>
   </div>
   <div id="download" onmouseover="show(this)" onmouseout="show_out(this)">
     <div id="tag">豆</div>
@@ -65,78 +71,583 @@
       <div id="left_01" class="left_box">
         <div class="left_min_a header_font01 box_border">
           正在热映<a class="font01 hoverall" href="">全部正在热映»</a><a class="font02 hoverall" href="">即将上映»</a>
-          <div id="pro01" class="pro"><span>null</span>/<span>null</span></div>
+          <div id="pro01" class="pro"><span>1</span>/<span></span></div>
           <div id="arrowhead_1_01" class="arrowhead">
             <</div>
               <div id="arrowhead_1_02" class="arrowhead">></div>
           </div>
+          <div class="hover_film_hot warp">
+            <div class="row_1">
+              <div class="filmname hover_filmname">null<div class="filmyears hover_filmyears">null</div>
+              </div>
+            </div>
+            <div class="row_2">
+              <div class="hover_star">
+                <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+              </div>
+              <div class="hover_people">(null)</div>
+            </div>
+            <div class="row_3">
+              <div class="filmtime hover_filmtime">null</div>
+              <div class="filmplace hover_filmplace">null</div>
+            </div>
+            <div class="row_4">
+              <div class="filmdirector hover_filmdirector">导演<span>null</span></div>
+              <div class="filmactor hover_filmactor">主演<span>null</span></div>
+            </div>
+          </div>
+          <div id="left_01_imgboxs">
+            <div class="hot_mid_film">
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">1</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+            </div>
+            <div class="hot_mid_film">
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+            </div>
+            <div class="hot_mid_film">
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+              <div class="hotingFilm">
+                <img src="" alt="" class="hotingImg">
+                <div class="hotingFilmName filmname">null</div>
+                <div class="hotingStars">
+                  <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                </div>
+                <div class="hotingBuy">选座购票</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div id="left_02" class="left_box">
-          <div id="hot_movie_title" class="header_font01 box_border">
-            最近热门电影<div class="font03 hoverall">热门</div>
-            <div class="font03 hoverall">最新</div>
-            <div class="font03 hoverall">豆瓣高分</div>
-            <div class="font03 hoverall">冷门佳片</div>
-            <div class="font03 hoverall">华语</div>
-            <div class="font03 hoverall">欧美</div>
-            <div class="font03 hoverall">韩国</div>
-            <div class="font03 hoverall">日本</div>
-            <div style="left:11.5rem" class="font02 hoverall">更多»</div>
+          <div id="left_02_topbox">
+            <div id="hot_movie_title" class="header_font01 box_border">
+              最近热门电影<div class="font03 hoverall">热门</div>
+              <div class="font03 hoverall">最新</div>
+              <div class="font03 hoverall">豆瓣高分</div>
+              <div class="font03 hoverall">冷门佳片</div>
+              <div class="font03 hoverall">华语</div>
+              <div class="font03 hoverall">欧美</div>
+              <div class="font03 hoverall">韩国</div>
+              <div class="font03 hoverall">日本</div>
+              <div style="left:11.5rem" class="font02 hoverall">更多»</div>
+            </div>
+            <div class="hover_bigbig">
+              <div class="hover_big_box">
+                <div class="hover_topbox">
+                  <div class="filmname hover_topfilmname warp">null<span class="filmyears hover_topfilmyears">null</span>
+                  </div>
+                  <div class="hover_topstars">
+                    <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                  </div>
+                  <div class="hover_toptag warp">
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                  </div>
+                  <div class="hover_topwant">
+                    <div class="writecomment">想看</div>
+                    <div class="writecomment">看过</div>
+                  </div>
+                </div>
+                <div class="hover_botbox warp">
+                  nullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnull<span>null</span>
+                </div>
+              </div>
+            </div>
+            <div class="filmBigbox">
+              <div></div>
+              <div class="filmbbbbox">
+                <div class="filmMidbox">
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">2<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                </div>
+                <div class="filmMidbox">
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                </div>
+                <div class="filmMidbox">
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="arrowheads"">
+            <div class="arrowhead" id="ar01"><</div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="arrowhead" id="ar02">></div>
           </div>
         </div>
         <div id="left_03" class="left_box">
-          <div id="hot_title" class="header_font01 box_border">
-            最近热门电视剧<div class="font03 hoverall">热门</div>
-            <div class="font03 hoverall">热门</div>
-            <div class="font03 hoverall">国产剧</div>
-            <div class="font03 hoverall">综艺</div>
-            <div class="font03 hoverall">美剧</div>
-            <div class="font03 hoverall">日剧</div>
-            <div class="font03 hoverall">韩剧</div>
-            <div class="font03 hoverall">日本动画</div>
-            <div class="font03 hoverall">纪录片</div>
-            <div style="left:7.9rem" class="font02 hoverall">更多»</div>
+          <div id="left_03bigbox">
+            <div id="hot_title" class="header_font01 box_border">
+              最近热门电视剧<div class="font03 hoverall">热门</div>
+              <div class="font03 hoverall">热门</div>
+              <div class="font03 hoverall">国产剧</div>
+              <div class="font03 hoverall">综艺</div>
+              <div class="font03 hoverall">美剧</div>
+              <div class="font03 hoverall">日剧</div>
+              <div class="font03 hoverall">韩剧</div>
+              <div class="font03 hoverall">日本动画</div>
+              <div class="font03 hoverall">纪录片</div>
+              <div style="left:7.9rem" class="font02 hoverall">更多»</div>
+            </div>
+            <div class="hover_bigbig">
+              <div class="hover_big_box">
+                <div class="hover_topbox">
+                  <div class="filmname hover_topfilmname warp">null<span class="filmyears hover_topfilmyears">null</span>
+                  </div>
+                  <div class="hover_topstars">
+                    <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+                  </div>
+                  <div class="hover_toptag warp">
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                    <div>null</div>
+                  </div>
+                  <div class="hover_topwant">
+                    <div>想看</div>
+                    <div>看过</div>
+                  </div>
+                </div>
+                <div class="hover_botbox warp">
+                  nullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnull<span>null</span>
+                </div>
+              </div>
+            </div>
+            <div class="filmBigbox">
+              <div></div>
+              <div class="filmbbbbox">
+                <div class="filmMidbox">
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">2<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                </div>
+                <div class="filmMidbox">
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                </div>
+                <div class="filmMidbox">
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                  <div class="filmsSmallbox">
+                    <img src="" alt="" class="filmimgbiu">
+                    <div class="filmname filmnamebiu warp">null<span class="filmpointsbiu">null</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="arrowheads"">
+            <div class="arrowhead" id="ar03"><</div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="arrowhead" id="ar04">></div>
+          </div>
+          </div>
         <div id="left_04" class="left_box">
           <div class="left_min_a header_font01 box_border">
             热门推荐
 
-            <div id="pro02" class="pro"><span>null</span>/<span>null</span></div>
+            <div id="pro02" class="pro"><span id="pro02_left">1</span>/<span>7</span></div>
             <div id="arrowhead_2_01" class="arrowhead">
               <</div>
                 <div id="arrowhead_2_02" class="arrowhead">></div>
             </div>
-            
+
             <div id="recommend_box">
               <div id="recommend">
-                <div class="rec_box rec_box_remove">
+                <div class="rec_box">
                   <div class="rec_img"><img src="pictures/index/rec_01.jpg" alt=""></div>
-                  <div class="rec_right"><div class="rec_title"><a href="" class="rec_title_a">《怪奇物语》第四季中字预告</a></div><div class="rec_content font03">小11米莉·波比·布朗等主演悉数回归，明年夏天上线！</div></div>
+                  <div class="rec_right">
+                    <div class="rec_title"><a href="" class="rec_title_a">高分热播剧《超越》主演高至霆</a></div>
+                    <div class="rec_content font03">写给青年“陈敬业”的一封信。</div>
+                  </div>
                 </div>
-                <div class="rec_box rec_box_remove">
+                <div class="rec_box">
                   <div class="rec_img"><img src="pictures/index/rec_02.jpg" alt=""></div>
-                  <div class="rec_right"><div class="rec_title"><a href="" class="rec_title_a">《怪奇物语》第四季中字预告</a></div><div class="rec_content font03">小11米莉·波比·布朗等主演悉数回归，明年夏天上线！</div></div>
+                  <div class="rec_right">
+                    <div class="rec_title"><a href="" class="rec_title_a">「豆瓣2021年度电影榜单」揭晓</a></div>
+                    <div class="rec_content font03">点击查看完整榜单，开启全年佳片好剧大赏。</div>
+                  </div>
                 </div>
-                <div class="rec_box rec_box_remove">
+                <div class="rec_box">
                   <div class="rec_img"><img src="pictures/index/rec_03.jpg" alt=""></div>
-                  <div class="rec_right"><div class="rec_title"><a href="" class="rec_title_a">《怪奇物语》第四季中字预告</a></div><div class="rec_content font03">小11米莉·波比·布朗等主演悉数回归，明年夏天上线！</div></div>
+                  <div class="rec_right">
+                    <div class="rec_title"><a href="" class="rec_title_a">《奇异博士2》官方中字预告</a></div>
+                    <div class="rec_content font03">奇异博士与红女巫旺达联手！魔法组重聚！</div>
+                  </div>
                 </div>
-                <div class="rec_box rec_box_remove">
+                <div class="rec_box">
                   <div class="rec_img"><img src="pictures/index/rec_04.jpg" alt=""></div>
-                  <div class="rec_right"><div class="rec_title"><a href="" class="rec_title_a">《怪奇物语》第四季中字预告</a></div><div class="rec_content font03">小11米莉·波比·布朗等主演悉数回归，明年夏天上线！</div></div>
+                  <div class="rec_right">
+                    <div class="rec_title"><a href="" class="rec_title_a">《蜘蛛侠：平行宇宙》续集中字预告</a></div>
+                    <div class="rec_content font03">《蜘蛛侠：纵横宇宙（上）》将于明年10月全球上映！</div>
+                  </div>
                 </div>
-                <div class="rec_box rec_box_remove">
+                <div class="rec_box">
                   <div class="rec_img"><img src="pictures/index/rec_05.jpg" alt=""></div>
-                  <div class="rec_right"><div class="rec_title"><a href="" class="rec_title_a">《怪奇物语》第四季中字预告</a></div><div class="rec_content font03">小11米莉·波比·布朗等主演悉数回归，明年夏天上线！</div></div>
+                  <div class="rec_right">
+                    <div class="rec_title"><a href="" class="rec_title_a">《怪奇物语》第四季中字预告</a></div>
+                    <div class="rec_content font03">小11米莉·波比·布朗等主演悉数回归，明年夏天上线！</div>
+                  </div>
                 </div>
-                <div class="rec_box rec_box_remove">
+                <div class="rec_box">
                   <div class="rec_img"><img src="pictures/index/rec_06.jpg" alt=""></div>
-                  <div class="rec_right"><div class="rec_title"><a href="" class="rec_title_a">《怪奇物语》第四季中字预告</a></div><div class="rec_content font03">小11米莉·波比·布朗等主演悉数回归，明年夏天上线！</div></div>
+                  <div class="rec_right">
+                    <div class="rec_title"><a href="" class="rec_title_a">《权游》前传《龙之家族》预告</a></div>
+                    <div class="rec_content font03">聚焦《权力的游戏》故事发生200年前，龙家坦格利安家族的故事。</div>
+                  </div>
                 </div>
-                <div class="rec_box rec_box_remove">
-                  <div class="rec_img"><img src="pictures/index/rec_08.jpg" alt=""></div>
-                  <div class="rec_right"><div class="rec_title"><a href="" class="rec_title_a">《怪奇物语》第四季中字预告</a></div><div class="rec_content font03">小11米莉·波比·布朗等主演悉数回归，明年夏天上线！</div></div>
+                <div class="rec_box">
+                  <div class="rec_img"><img src="pictures/index/rec_07.jpg" alt=""></div>
+                  <div class="rec_right">
+                    <div class="rec_title"><a href="" class="rec_title_a">DC《新蝙蝠侠》中字预告</a></div>
+                    <div class="rec_content font03">罗伯特·帕丁森饰演蝙蝠侠！明年3月4日北美上映！</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -230,8 +741,62 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="commentboxborder">
+    <div id="commentbox">
+        <div id="commentbox_title"><span id="title_contg">添加收藏：写短评</span>
+            <div id="commentbox_close">x</div>
+        </div>
+        <form id="comment_form">
+            <div id="comment_row1">
+                <div class="jdsa"><input type="radio" name="value">想看</div>
+                <div class="jdsa"><input type="radio" name="value">看过</div>
+                <div id="comment_star">给个评价吧?(可选):
+                    <div id="comment_stars">
+                        <div id="eva1_star">
+                            <img src="./pictures/subject/star.png" class="c_stars1" alt="">
+                            <img src="./pictures/subject/star.png" class="c_stars1" alt="">
+                            <img src="./pictures/subject/star.png" class="c_stars1" alt="">
+                            <img src="./pictures/subject/star.png" class="c_stars1" alt="">
+                            <img src="./pictures/subject/star.png" class="c_stars1" alt="">
+                        </div>
+                        <div id="eva1_score"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="comment_row2">
+                标签(多个标签用空格分隔):
+            </div>
+            <input type="text" id="comment_tag" class="input">
+            <div id="comment_row3">
+                简短评论:
+                <span>350</span>
+            </div>
+            <textarea name="" style="resize:none" class="input" id="short_comment" cols="30" rows="2"></textarea>
+            <div id="save">
+                <button>保存</button>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div id="bottom">
+    <div id="comp">© 2005－2022 douban.com, all rights reserved 北京豆网科技有限公司</div>
+    <div id="about">
+      <div class="about_item">关于豆瓣</div>·
+      <div class="about_item">在豆瓣工作</div>·
+      <div class="about_item">联系我们</div>·
+      <div class="about_item">法律声明</div>·
+      <div class="about_item">帮助中心</div>·
+      <div class="about_item">移动应用</div>·
+      <div class="about_item">豆瓣广告</div>
 
+    </div>
+  </div>
 </body>
-<script src="js/index.js"></script>
-
+<script src="./js/index.js" type="module"></script>
+<script src="./js/all.js"></script>
 </html>

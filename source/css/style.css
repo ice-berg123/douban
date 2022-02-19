@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 .font01 {
     font-size: 0.85rem;
     text-decoration: none;
@@ -17,6 +18,12 @@
     text-decoration: none;
     color: rgb(153,153,153);
 }
+.font04{
+    font-size: 0.9rem;
+    text-decoration: none;
+    color:rgb(51,51,51)
+}
+
 .header_font01 {
     font-size: 1rem;
     color: black;
@@ -25,6 +32,7 @@
     background-color: rgb(34, 119, 170);
     height: 1.1rem;
     color: white;
+    cursor: pointer;
 }
 .box_border {
     margin-top: 0.7rem;
@@ -77,4 +85,64 @@
     font-weight: 600;
     color:white;
     border-radius: 0.3rem;
+}
+#filesort{
+    position: relative;
+    top:0.3rem;
+    left: 1.5rem;
+    cursor: pointer;
+}
+.stars{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    width:90px;
+    height: 25px;
+    border: 1px solid black;
+}
+.star{
+    display: inline-block;
+    width:65px;
+    height: 12px;
+    background: url("../pictures/mix/star.png") no-repeat;
+    background-position: 0% 0%;
+    background-size:60px;
+}
+.star-point{
+    display: inline-block;
+    font-size: 13px;
+    color:rgb(226,144,96);
+}
+#bottom{
+    position: relative;
+    display: flex;
+    font-size: 0.8rem;
+    margin-left: 13rem;
+    padding-top: 0.5rem;
+    margin-top: 3rem;
+    border-top: 1px dashed rgb(221,221,221);
+    width:65rem;
+    padding-bottom: 0.5rem;
+}
+#comp{
+    color:rgb(179,153,153);
+}
+#about{
+    display: flex;
+    margin-left: 10rem;
+}
+#about>div{
+    margin-left: 0.2rem;
+    cursor: pointer;
+    margin-right: 0.2rem;
+    color:rgb(51,119,170);
+}
+#about>div:hover{
+    color: white;
+    background-color: rgb(51,119,170);
+}
+.warp{
+    white-space:normal;
+    word-break:break-all;
+    word-wrap:break-word; 
 }

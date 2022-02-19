@@ -1,6 +1,7 @@
-import { PostData, Click,FormToString } from "./moudle.js";
-document.documentElement.style.fontSize =
-    document.documentElement.clientWidth / 100 + "px";
+import { PostData, Click,FormToString,MakeUrl, LoginByToken} from "./moudle.js";
+
+
+//getToken
 
 function failOrSuccess(bool) {
     let leve = 1;
@@ -31,14 +32,20 @@ let form1 = document.querySelector("#form_login");
 login.addEventListener("click", async () => {
     let data = FormToString(form1);
     let res = await PostData('/login',data);
-    console.log(res);
     if (res.status == false) {
         document.querySelector("#failedOrSuccess").textContent = res.info;
         failOrSuccess(0);
     }
     if (res.status) {
+        let newdata = data.replace("username","Username").replace("password","Password")
+        let getToken = await PostData('/auth',newdata);
+        localStorage.setItem("token",getToken.data.token)
         document.querySelector("#failedOrSuccess").textContent = res.info;
         failOrSuccess(1);
+        setInterval(()=>{
+            let newurl = MakeUrl("/index.html")
+            window.location.href = newurl
+        },500)
     }
 });
 let reg = document.querySelector('#reg');
@@ -53,6 +60,7 @@ let pn = reg.addEventListener("click", async () => {
         failOrSuccess(0);
     }
     if (res.status) {
+
         document.querySelector("#failedOrSuccess").textContent = res.info;
         failOrSuccess(1);
     }
@@ -76,4 +84,3 @@ next.addEventListener("click", () => {
     document.querySelector("#reg_step1").style.display = "none";
     document.querySelector("#reg_step2").style.display = "block";
 })
-

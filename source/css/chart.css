@@ -40,10 +40,13 @@
     width:5.2rem;
     height: 7rem;
 }
+.fime_picture{
+    width:5.2rem;
+    height: 7rem;
+}
 .pic_right{
     width:37rem;
     margin-left: 1.5rem;
-
 }
 .small_film_name{
     margin-top: 1rem;
@@ -58,7 +61,7 @@
 .film_name_information{
     margin-top: 0.8rem;
     font-size: 0.8rem;
-    color: rgb(102,126,181);
+    color: rgb(102,102,102);
     display:block;
     word-break: break-all;
     word-wrap: break-word;
@@ -126,25 +129,34 @@
 }
 #top_films{
     height: 28rem;
-    background-color: antiquewhite;
     display: flex;
     flex-wrap: wrap;
+    width: 20rem;
 }
 .top_film{
-    background-color: antiquewhite;
-    border: 1px solid black;
     height: 9.1rem;
-    width:4.35rem
+    width:4.35rem;
+    margin-right: 0.5rem;
 }
 .top_film_pic{
+    cursor: pointer;
     margin-top: 1rem;
-    background-color: aqua;
+    width:4.35rem;
+    height: 6rem;
+}
+.top_filmimg{
     width:4.35rem;
     height: 6rem;
 }
 .top_film_name{
-    background-color: aqua;
     width: inherit;
     margin-top: 1rem;
-    height: 1rem;
+    display: inline;
+    font-size: 0.5rem;
+    color: rgb(51,119,170);
+    cursor: pointer;
+}
+.top_film_name:hover{
+    background-color: rgb(51,119,170);
+    color: white;
 }

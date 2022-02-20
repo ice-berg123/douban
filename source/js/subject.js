@@ -1,6 +1,7 @@
-import { LoginByToken,LoginChecked} from "./moudle.js";
+import { LoginByToken,LoginChecked,MakeUrl,PostData} from "./moudle.js";
 
 LoginChecked()
+
 let c_stars = document.querySelectorAll(".c_stars")
 let eva_score = document.querySelector("#eva_score")
 let score_ch = ["很差","较差","还行","推荐","力荐"]
@@ -113,3 +114,81 @@ for(let i = 0; i < writecomment.length ; i++){
         commentboxborder.style.display = "block"
     })
 }
+let filmid = parseInt(window.location.search.substr(9))+1
+let adddis = document.querySelector("#adddis")
+adddis.addEventListener("click",() =>{
+    location.href = MakeUrl("/discuss.html?film_id="+filmid)
+})
+async function getfilmdata(){
+    let film_data = await PostData("/film/getfilm","film_id="+filmid)
+    let film = film_data.data
+    let film_title = document.querySelector("#film_title")
+    let film_pictures = document.querySelector("#film_pictures")
+    film_pictures.children[0].src = film.poster_url
+    film_title.innerHTML = film.name + "<span>"+film.release_time.substr(0,4)+"</span>"
+    let film_mm = document.querySelector("#film_mm")
+    film_mm.children[0].children[1].textContent = film.directer
+    film_mm.children[1].children[1].textContent = film.screenwriter
+    film_mm.children[3].children[1].textContent = film.type
+    film_mm.children[4].children[1].textContent = film.location
+    film_mm.children[5].children[1].textContent = film.language
+    film_mm.children[6].children[1].textContent = film.release_time
+    film_mm.children[7].children[1].textContent = film.length
+    film_mm.children[8].children[1].textContent = film.other_name
+    film_mm.children[9].children[1].textContent = film.imdb
+    let score_all = document.querySelector("#score_all")
+    score_all.children[1].children[1].textContent = film.score
+    let score_big = document.querySelector("#score_big")
+    score_big.textContent = film.score
+    score_all.children[1].children[1].style.display = "none"
+    let eva_numbers = document.querySelector("#eva_numbers")
+    eva_numbers.textContent = film.post_num+"人评价"
+    restar()
+    let file_name = document.querySelectorAll(".file_name")
+    for(let i =0; i < file_name.length; i++){
+        file_name[i].textContent = film.name
+    }
+    let plot_information = document.querySelector("#plot_information")
+    plot_information.textContent = film.introduction
+    let film_actorsee =await PostData("/actor/getactorsbyfilmid","film_id="+filmid)
+    let filmActorData = film_actorsee.data
+    let film_actors = document.querySelector("#film_actors")
+    let actornumbers = document.querySelector("#actornumbers")
+    actornumbers.textContent = "全部"+filmActorData.length+"人"
+    for(let i = 0; i < filmActorData.length; i++){
+        let temp_actor_box = document.createElement("div")
+        let temp_actor_img = document.createElement("img")
+        let temp_actor_name = document.createElement("div")
+        let temp_actor_pos = document.createElement("div")
+        temp_actor_img.src = filmActorData[i].picture_url
+        temp_actor_pos.textContent = filmActorData[i].role
+        let actorMore = await PostData("/actor/searchactor","actor_id="+filmActorData[i].actor_id)
+        let actorMoreData = actorMore.data
+        temp_actor_name.textContent = actorMoreData.name
+        temp_actor_box.classList.add("actor_box")
+        temp_actor_img.classList.add("actor_img")
+        temp_actor_name.classList.add("actor_name")
+        temp_actor_pos.classList.add("actor_pos")
+        temp_actor_box.append(temp_actor_img)
+        temp_actor_box.append(temp_actor_name)
+        temp_actor_box.append(temp_actor_pos)
+        film_actors.append(temp_actor_box)
+        temp_actor_img.i = i
+        temp_actor_img.addEventListener("click",()=>{
+            location.href = MakeUrl("/actor.html?actor_id="+filmActorData[temp_actor_img.i].actor_id)
+        })
+    }
+}
+getfilmdata()
+for(let i = 0; i <writecomment.length ; i++){
+    writecomment[i].addEventListener("click",() =>{
+        if(localStorage.getItem("token") == null){
+            location.href = MakeUrl("/login.html")
+        }
+    })
+}
+adddis.addEventListener("click",() =>{
+    if(localStorage.getItem("token") == null){
+        location.href = MakeUrl("/login.html")
+    }
+})

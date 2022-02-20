@@ -71,9 +71,14 @@
     margin-right: 1.5rem;
 }
 .filmname{
-    display: inline-block;
+    display: inline;
     margin-left: 0.5rem;
     color: rgb(143,119,178);
+}
+.filmname:hover{
+    background-color: rgb(34,119,170);
+    color:white;
+    cursor: pointer;
 }
 .filmpoints{
     display: inline-block;
@@ -172,7 +177,10 @@
 #actorimgbox{
     width: 8rem;
     height: 11rem;
-    background-color: antiquewhite;
+}
+#actorimg{
+    width: 8rem;
+    height: 11rem;
 }
 #actorrightinfo{
     margin-left: 1rem;

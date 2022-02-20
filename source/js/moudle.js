@@ -81,6 +81,7 @@ function MakeUrl(path) {
 async function LoginByToken() {
     let response = await GetDataByToken("/user/getuserinfo")
     if (response.info == "无效的Token") {
+        localStorage.removeItem("token")
         return false
     } else {
         return response.data
@@ -125,7 +126,7 @@ async function LoginChecked() {
     }
     let nav_3 = document.querySelector("#nav_3")
     nav_3.children[3].href = MakeUrl("/chart.html")
-    nav_3.children[4].href = MakeUrl("/tag.html")
+    nav_3.children[4].href = MakeUrl("/tag.html?limit=20")
     let search = document.querySelector("#search")
     search.children[0].href = MakeUrl("/index.html")
 }

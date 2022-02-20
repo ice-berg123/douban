@@ -53,6 +53,7 @@
 #film_img{
     width: 3.4rem;
     height: 4rem;
+    cursor: pointer;
 }
 .film_info{
     font-size: 0.9rem;
@@ -62,8 +63,10 @@
     margin-top: 0.5rem;
 }
 #filmname{
+    display: inline;
     color:rgb(51,162,210);
     cursor: pointer;
+    
 }
 #filmname:hover{
     color:white;

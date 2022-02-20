@@ -29,6 +29,10 @@
     width:9rem;
     height: 12.5rem;
 }
+#film_pictures *{
+    width:9rem;
+    height: 12.5rem;
+}
 #film_mm{
     width:20rem;
     margin-left: 0.8rem;
@@ -107,8 +111,8 @@
 }
 #update{
     cursor: pointer;
-    position: relative;
-    top:1.4rem;
+    position: absolute;
+    top:16.4rem;
     font-size: 0.5rem;
     color:rgb(187,202,222);
     width:5.4rem;
@@ -312,9 +316,9 @@
     color: white;
 }
 #right_buy_box{
-    position: relative;
+    position: absolute;
     left:65rem;
-    top:-30rem;
+    top:20rem;
     background-color: rgb(240,243,245);
     width: 16rem;
     height: 4rem;
@@ -354,9 +358,15 @@
     font-size: 0.5rem;
     color: rgb(51,119,170);
 }
+#actornumbers:hover{
+    color:white
+}
 .actor_name{
     text-align: center;
     margin-top: 0.3rem;
+}
+.actor_img{
+    cursor: pointer;
 }
 .actor_pos{
     text-align: center;
@@ -367,8 +377,8 @@
 }
 #writecomment{
     cursor: pointer;
-    position: relative;
-    left: 24rem;
+    position: absolute;
+    left: 38rem;
     display: inline-block;
     font-size: 0.8rem;
     color: rgb(199,96,38);
@@ -383,8 +393,8 @@
 }
 #adddis{
     cursor: pointer;
-    position: relative;
-    left: 24rem;
+    position: absolute;
+    left: 37rem;
     display: inline-block;
     font-size: 0.8rem;
     color: rgb(199,96,38);

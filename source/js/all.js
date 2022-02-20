@@ -6,4 +6,5 @@ function restar(){
     star[i].style.backgroundPosition = 0+"% " + (100-Math.round(points)*10) + "%"; 
     }
 }
+
 restar()

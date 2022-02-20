@@ -277,7 +277,7 @@ height: 1.5rem;
 }
 .film_big_box{
     display: flex;
-    width: 40rem;
+    width: 45rem;
     flex-wrap: wrap;
     margin-top: 1rem;
 }
@@ -285,23 +285,28 @@ height: 1.5rem;
     display: none;
 }
 .filem_small_box{
-    background-color: aqua;
-    width: 7.85rem;
+    width: 7.35rem;
     height: 13.5rem;
-    border: 1px solid;
+    margin-right: 1rem;
 }
 .img_box{
     height: 10rem;
-    background-color:antiquewhite;
+}
+.film_img{
+    width: 7.35rem;
+    height: 10rem;
+    cursor: pointer;
 }
 .name_points{
-    background-color: azure;
     margin-top: 1rem;
     height: 1rem;
     font-size: 0.5rem;
     word-break:break-all;
     word-wrap:break-word;
-
+    cursor: pointer;
+}
+.name_points:hover{
+    text-decoration: underline;
 }
 .points{
     color:rgb(255,172,45);
@@ -330,8 +335,12 @@ height: 1.5rem;
 }
 .film_pic{
     margin-top: 1rem;
-
     width:5.2rem;
+    height: 7rem;
+}
+.fime_picture{
+    width:5.2rem;
+    cursor: pointer;
     height: 7rem;
 }
 .pic_right{

@@ -58,17 +58,21 @@ async function tedd(){
         if(inputre.value != ""){
             let lpcommentRequest =await SendDataByToken("/lpcomment/addlpcomment","post_id="+discussionData[n].post_id+"&&txt="+inputre.value)
             let lpcomment = lpcommentRequest.data
-            console.log(lpcommentRequest)
+            window.location.reload()
         }
     })
     let getLpcommetnRequest = await PostData("/lpcomment/getlpcomment","post_id="+discussionData[n].post_id)
     let getLpcomment = getLpcommetnRequest.data
+    console.log(getLpcomment)
     let response_box = document.querySelector("#response_box")
     if(getLpcomment){
         for(let i = 0; i < getLpcomment.length;i++){
             let tempuser_response = document.createElement("div")
             tempuser_response.innerHTML = "<img src='' classers='u_responseimg' class='img' alt=''><div class='user_response_right'><div class='user_iiiii'><div class='user_response_name'>null</div><div class='user_response_time'>null</div></div><div class='user_response_info'>null</div></div>"
             tempuser_response.classList.add("user_response")
+            tempuser_response.children[1].children[0].children[0].textContent = getLpcomment[i].username
+            tempuser_response.children[1].children[0].children[1].textContent = getLpcomment[i].comment_time.substr(0,19)
+            tempuser_response.children[1].children[1].textContent = getLpcomment[i].txt
             response_box.append(tempuser_response)
         }
     }

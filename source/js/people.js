@@ -1,4 +1,4 @@
-import { LoginByToken,LoginChecked,GetDataByToken,SendDataByToken, PostData, MakeUrl} from "./moudle.js";
+import { LoginByToken,LoginChecked,GetDataByToken,SendDataByToken, PostData, MakeUrl, GetData} from "./moudle.js";
 
 LoginChecked()
 let username_kinds_info = document.querySelector("#username_kinds_info")
@@ -110,6 +110,28 @@ async function PeopleGetData(){
             username_see.append(temp_comment_box)
         }
     }
+    let get_film_commentrequest = await GetDataByToken("/longpost/longpostsofuser")
+    let get_film_comment = get_film_commentrequest.data
+    pos_numbers[2].textContent = "共"+get_film_comment.length + "条"
+    console.log(get_film_comment)
+    let my_film_comment = document.querySelector("#my_film_comment")
+    for(let i = 0; i < get_film_comment.length;i++){
+        let temp_film_comment_box = document.createElement("div")
+        temp_film_comment_box.classList.add("film_comment_box")
+        temp_film_comment_box.innerHTML = "<img src='' alt='' class='film_img'><div class='film_right_part_box'><div class='my_comment_title'>null</div><div class='my_co_info'><span>null</span><span>评论:</span><span>null</span></div><div class='my_comment_more_info'>null</div></div>"
+        my_film_comment.append(temp_film_comment_box)
+        let getfilmrequesttemp = await PostData("/film/getfilm","film_id="+get_film_comment[i].film_id)
+        let getfilmtemp = getfilmrequesttemp.data
+        temp_film_comment_box.children[0].src = getfilmtemp.poster_url
+        temp_film_comment_box.children[1].children[0].textContent = get_film_comment[i].title
+        temp_film_comment_box.children[1].children[1].children[0].textContent = get_film_comment[i].username
+        temp_film_comment_box.children[1].children[1].children[2].textContent = getfilmtemp.name
+        temp_film_comment_box.children[1].children[2].textContent = get_film_comment[i].txt
+    }
+    let myfilmpostRe = await GetData("/post/lookpost")
+    let myfilmpost = myfilmpostRe.data
+    console.log(myfilmpost)
+
 }
 let my_comment_more_info = document.querySelectorAll(".my_comment_more_info")
 for(let i = 0; i < my_comment_more_info.length;i++){

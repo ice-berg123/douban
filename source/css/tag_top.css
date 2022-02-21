@@ -121,6 +121,7 @@
     }
     #search_go2 {
     height: 2.1rem;
+    cursor: pointer;
     }
     #nav_3 {
     display: flex;

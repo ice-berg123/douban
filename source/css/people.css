@@ -18,6 +18,12 @@
     font-size: 1.4rem;
     font-weight: bold;
 }
+.main_film_img{
+    cursor: pointer;
+}
+.comment_box img{
+    cursor: pointer;
+}
 #tag_people{
     margin-top: 0.2rem;
     display: flex;
@@ -138,4 +144,41 @@
     display: none;
     border-radius: 0.2rem;
     outline: none;
+}
+#my_film_comment{
+    margin-top: 3rem;
+}
+.film_img{
+    width: 5rem;
+    height: 7rem;
+    margin-right: 1rem;
+}
+.film_comment_box{
+    display: flex;
+    margin-top: 2rem;
+}
+.my_comment_title{
+    color:rgb(102,102,153);
+    cursor: pointer;
+    margin-bottom: 2rem;
+    display: inline;
+}
+.my_comment_title:hover{
+    color: white;
+    background-color: rgb(51,119,170);
+}
+.my_co_info span{
+    font-size: 0.8rem;
+    color:rgb(102,102,153);
+    cursor: pointer;
+    margin-right: 0.5rem;
+    display: inline;
+}
+.my_co_info span:hover{
+    color: white;
+    background-color: rgb(51,119,170);
+}
+.my_comment_more_info{
+    margin-top: 1rem;
+    font-size: 0.9rem;
 }

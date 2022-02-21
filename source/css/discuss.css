@@ -37,6 +37,7 @@
     line-height: 2.7rem;
     background-color: rgb(61,176,77);
     color: white;
+    cursor: pointer;
 }
 #submit:hover{
     background-color: rgb(71,191,88);

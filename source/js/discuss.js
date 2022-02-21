@@ -1,4 +1,4 @@
-import { MakeUrl, PostData} from "./moudle.js";
+import { MakeUrl, PostData,PostDataByToken,SendDataByToken} from "./moudle.js";
 let film_id = window.location.search.substr(1)
 let film_box = document.querySelector("#film_box")
 async function initialize(){
@@ -14,5 +14,17 @@ async function initialize(){
 let index = document.querySelector(".index")
 index.addEventListener("click",() => {
     window.location.href = MakeUrl("/index.html")
+})
+let addtitle = document.querySelector("#addtitle")
+let wirite = document.querySelector("#wirite")
+let submit = document.querySelector("#submit")
+console.log(film_id)
+submit.addEventListener("click",async() => {
+    if(addtitle.value != "" && wirite.value !=""){
+        let comment_post =await SendDataByToken("/longpost/addlongpost","title="+addtitle.value+"&&"+"txt="+wirite.value+"&&"+film_id+"&&likes=0&&dislikes=0&&score=4.0&&comment_num=0")
+        console.log(comment_post)
+        
+        window.location.href = MakeUrl("/review.html?"+film_id)
+    }
 })
 initialize()

@@ -1,6 +1,5 @@
 #search_content{
     width:44rem;
-    background-color: antiquewhite;
     margin-top: 3rem;
     left:13rem;
     position: relative;
@@ -17,6 +16,7 @@
 .search_film_img{
     width: 4rem;
     height: 5.5rem;
+    cursor: pointer;
 }
 .search_film_information{
     padding-left: 1rem;

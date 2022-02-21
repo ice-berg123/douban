@@ -1,4 +1,4 @@
-import { LoginByToken, LoginChecked, GetData, MakeUrl } from "./moudle.js";
+import { LoginByToken, LoginChecked, GetData, MakeUrl,submitWantOrWatched } from "./moudle.js";
 
 
 LoginChecked()
@@ -108,6 +108,7 @@ for (let i = 0; i < hotingImg.length; i++) {
             hover_film_hot.children[2].children[1].textContent = filmsArry[i].location
             hover_film_hot.children[3].children[0].children[0].textContent = filmsArry[i].directer
             hover_film_hot.children[3].children[1].children[0].textContent = filmsArry[i].screenwriter
+
             restar()
         }
         hotimghover()
@@ -200,7 +201,6 @@ async function makelunbobox() {
             for (let k = 0; k < filmbbbbox[i].children[j].children.length; k++) {
                 filmbbbbox[i].children[j].children[k].p = p
                 filmbbbbox[i].children[j].children[k].addEventListener("mouseover", () => {
-                    console.log(filmbbbbox[i].children[j].children[k].p)
                     hover_big_box[i].children[0].children[0].innerHTML = filmsArry[filmbbbbox[i].children[j].children[k].p].name + "<span class='filmyears hover_topfilmyears'>("+filmsArry[filmbbbbox[i].children[j].children[k].p].release_time.substr(0,4)+")</span>"
                     hover_big_box[i].children[0].children[1].children[0].children[1].textContent = filmsArry[filmbbbbox[i].children[j].children[k].p].score
                     let tempstr = filmsArry[filmbbbbox[i].children[j].children[k].p].length + " / "+filmsArry[filmbbbbox[i].children[j].children[k].p].location + " / "+filmsArry[filmbbbbox[i].children[j].children[k].p].type + " / "+filmsArry[filmbbbbox[i].children[j].children[k].p].directer+"(导演)" + " / "+filmsArry[filmbbbbox[i].children[j].children[k].p].screenwriter
@@ -364,13 +364,6 @@ for (let i = 0; i < c_stars1.length; i++) {
         }
     })
 }
-let eva1_star = document.querySelector("#eva1_star")
-eva1_star.addEventListener("mouseout", () => {
-    for (let i = 0; i < c_stars1.length; i++) {
-        c_stars1[i].src = "./pictures/subject/star.png"
-    }
-    eva1_score.textContent = ""
-})
 
 
 
@@ -392,8 +385,6 @@ for (let i = 0; i < arrowheads.length; i++) {
                 rel2_pos = j - arr2_rnum
                 arr2_rnum = j
             }
-            console.log(rel1_pos)
-            console.log(rel2_pos)
             if (rel1_pos > 0) {
                 for (let p = 0; p < rel1_pos; p++) {
                     setTimeout(() => {
@@ -479,7 +470,7 @@ async function initialize() {
     let films = await GetData("/film/filmlist")
     let filmsArry = films.data
     for (let i = 0; i < hotingFilm.length; i++) {
-        hotingFilm[i].children[0].src = filmsArry.poster_url
+        hotingFilm[i].children[0].src = filmsArry[i].poster_url
         hotingFilm[i].children[1].textContent = filmsArry[i].name
         hotingFilm[i].children[1].addEventListener("click",() => {
             location.href = MakeUrl("/subject.html?film_id="+i)

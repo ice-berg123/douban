@@ -1,4 +1,4 @@
-import { LoginByToken,LoginChecked,MakeUrl,PostData} from "./moudle.js";
+import { FormToString, GetData, LoginByToken,LoginChecked,MakeUrl,PostData,submitWantOrWatched} from "./moudle.js";
 
 LoginChecked()
 
@@ -19,12 +19,13 @@ for (let i = 0; i < c_stars.length;i++){
     })
 }
 let eva_star = document.querySelector("#eva_star")
-eva_star.addEventListener("mouseout",() => {
+function starsOut(){
     for(let i = 0; i < c_stars.length ; i++){
         c_stars[i].src = "./pictures/subject/star.png"
     }
     eva_score.textContent = ""
-})
+}
+eva_star.addEventListener("mouseout",starsOut)
 
 
 
@@ -43,14 +44,6 @@ for (let i = 0; i < c_stars1.length;i++){
 
     })
 }
-let eva1_star = document.querySelector("#eva1_star")
-eva1_star.addEventListener("mouseout",() => {
-    for(let i = 0; i < c_stars1.length ; i++){
-        c_stars1[i].src = "./pictures/subject/star.png"
-    }
-    eva1_score.textContent = ""
-})
-
 
 
 
@@ -117,7 +110,7 @@ for(let i = 0; i < writecomment.length ; i++){
 let filmid = parseInt(window.location.search.substr(9))+1
 let adddis = document.querySelector("#adddis")
 adddis.addEventListener("click",() =>{
-    location.href = MakeUrl("/discuss.html?film_id="+filmid)
+    location.href = MakeUrl("/discuss.html?film_id="+(filmid))
 })
 async function getfilmdata(){
     let film_data = await PostData("/film/getfilm","film_id="+filmid)
@@ -178,6 +171,41 @@ async function getfilmdata(){
             location.href = MakeUrl("/actor.html?actor_id="+filmActorData[temp_actor_img.i].actor_id)
         })
     }
+    let discussionRequest =await PostData("/longpost/getlongpostbyfilmid","film_id="+filmid)
+    let discussionData = discussionRequest.data
+    let discusstion = document.querySelector(".discusstion")
+
+    for(let i = 0; i < discussionData.length; i++){
+        let temp_dis_r1 = document.createElement("div")
+        temp_dis_r1.classList.add("dis_r1")
+        temp_dis_r1.innerHTML = "<div class='dis_title'>null</div><div class='dis_user'>来自<span>null</span></div><div class='dis_time'>null</div>"
+        discusstion.append(temp_dis_r1)
+    }
+    for(let i = 0; i <discussionData.length; i++){
+        let dis_r1= document.querySelectorAll(".dis_r1")
+        dis_r1[i].children[0].textContent = discussionData[i].title
+        dis_r1[i].children[1].children[0].textContent = discussionData[i].username
+        dis_r1[i].children[2].textContent = discussionData[i].post_time.substr(0,19)
+    }
+    let sdadf = document.querySelector(".sdadf")
+    sdadf.children[1].textContent = "全部"+discussionData.length+"条"
+    let shorcommentRequest =await PostData("/shortpost/getshortpostbyfilmid","film_id="+(filmid-1))
+    let shortcomment = shorcommentRequest.data
+    let comment = document.querySelector("#comment")
+    actornumbers.textContent ="全部"+ shortcomment.length + "条"
+    for(let i = 0; i < shortcomment.length ; i++){
+        let temp_comment_information = document.createElement("div")
+        temp_comment_information.classList.add("comment_information")
+        temp_comment_information.innerHTML = "<div class='ci_r1'><div class='username'>null</div>看过<div class='starsAndscore'><span class='star'></span><span class='star-point hinte'>8</span></div><div class='comment_time'>null</div></div><span class='comment_in'>null</span>"
+        comment.append(temp_comment_information)
+    }
+    let comment_information = document.querySelectorAll(".comment_information")
+    for(let i = 0; i < comment_information.length;i++){
+        comment_information[i].children[0].children[0].textContent = shortcomment[i].username
+        comment_information[i].children[0].children[2].textContent = shortcomment[i].post_time.substr(0,10)
+        comment_information[i].children[1].textContent = shortcomment[i].txt
+    }
+    restar()
 }
 getfilmdata()
 for(let i = 0; i <writecomment.length ; i++){
@@ -192,3 +220,4 @@ adddis.addEventListener("click",() =>{
         location.href = MakeUrl("/login.html")
     }
 })
+submitWantOrWatched()

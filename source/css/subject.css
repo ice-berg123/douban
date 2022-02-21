@@ -55,6 +55,9 @@
 .small_title{
     margin-top: 0.2rem;
 }
+.hinte{
+    display: none;
+}
 .scorefont{
     font-size: 0.7rem;
     color:rgb(155,155,155);

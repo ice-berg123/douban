@@ -1,4 +1,4 @@
-import { LoginByToken,LoginChecked,GetDataByToken,SendDataByToken} from "./moudle.js";
+import { LoginByToken,LoginChecked,GetDataByToken,SendDataByToken, PostData, MakeUrl} from "./moudle.js";
 
 LoginChecked()
 let username_kinds_info = document.querySelector("#username_kinds_info")
@@ -40,11 +40,82 @@ window.addEventListener("click",()=> {
 async function PeopleGetData(){
     let userData =await LoginByToken()
     let userimg = document.querySelector("#userimg")
-    console.log(userData)
     userintroduction.children[0].textContent = userData.introduction
     userimg.src = userData.picture_url
-    let watchFilms =await GetDataByToken("/user/getwant")
-    let watchedFilms =await GetDataByToken("/user/getwatched")
-    
+    let getDataRequest01 = await GetDataByToken("/shortpost/getshortpostsofuser")
+    let getData01 = getDataRequest01.data
+    let want_films = document.querySelector("#want_films")
+    let see_films = document.querySelector("#see_films")
+    let username_want = document.querySelector("#username_want")
+    let username_see = document.querySelector("#username_see")
+    let pos_numbers = document.querySelectorAll(".pos_numbers")
+    for(let i = 0; i <getData01.length;i++){
+        let want_n = 0;
+        let see_n = 0;
+        if(getData01[i].want == 1){
+            want_n++;
+            pos_numbers[0].textContent = "共"+ want_n +"部"
+            console.log(getData01[i].film_id)
+            let getfilmrequest = await PostData("/film/getfilm","film_id="+((parseInt(getData01[i].film_id))+1))
+            let getfilm = getfilmrequest.data
+            let tempimg = document.createElement("IMG")
+            tempimg.addEventListener("click",() => {
+                window.location.href = MakeUrl("/subject.html?film_id="+(parseInt(getData01[i].film_id)))
+            })
+            tempimg.src = getfilm.poster_url
+            tempimg.classList.add("main_film_img")
+            want_films.append(tempimg)
+            let temp_comment_box = document.createElement("div")
+            temp_comment_box.innerHTML = "<img src='' class='comment_film_imgb' alt=''><div class='film_right_info'><div class='film_title_comment'><span>null</span></div><div class='film_more_information'><span>null</span></div><div class='my_comment'><div class='time'>null</div><div class='my_tag'>标签:<span>null</span></div></div><span class='my_comment_content'>null</span></div>"
+            temp_comment_box.children[0].src = getfilm.poster_url
+            temp_comment_box.children[1].children[0].children[0].textContent = getfilm.name+" / "+getfilm.other_name
+            temp_comment_box.children[1].children[1].children[0].textContent = getfilm.release_time +" / "+getfilm.directer+" / "+getfilm.screenwriter + " / "+getfilm.length + " / "+getfilm.type + " / " + getfilm.language
+            temp_comment_box.children[1].children[2].children[0].textContent = getData01[i].post_time.substr(0,10)
+            temp_comment_box.children[1].children[2].children[1].children[0].textContent = getData01[i].tags
+            temp_comment_box.children[1].children[3].textContent = getData01[i].txt
+            temp_comment_box.classList.add("comment_box")
+            temp_comment_box.children[0].addEventListener("click",() => {
+                window.location.href = MakeUrl("/subject.html?film_id="+(parseInt(getData01[i].film_id)))
+            })
+            temp_comment_box.children[1].children[0].children[0].addEventListener("click",() => {
+                window.location.href = MakeUrl("/subject.html?film_id="+(parseInt(getData01[i].film_id)))
+            })
+            
+            username_want.append(temp_comment_box)
+        }else{
+            see_n++;
+            pos_numbers[1].textContent = "共"+ see_n + "部"
+            let getfilmrequest = await PostData("/film/getfilm","film_id="+((parseInt(getData01[i].film_id))+1))
+            let getfilm = getfilmrequest.data
+            let tempimg = document.createElement("IMG")
+            tempimg.src = getfilm.poster_url
+            tempimg.classList.add("main_film_img")
+            see_films.append(tempimg)
+            let temp_comment_box = document.createElement("div")
+            temp_comment_box.innerHTML = "<img src='' class='comment_film_imgb' alt=''><div class='film_right_info'><div class='film_title_comment'><span>null</span></div><div class='film_more_information'><span>null</span></div><div class='my_comment'><div class='time'>null</div><div class='my_tag'>标签:<span>null</span></div></div><span class='my_comment_content'>null</span></div>"
+            temp_comment_box.children[0].src = getfilm.poster_url
+            temp_comment_box.children[1].children[0].children[0].textContent = getfilm.name+" / "+getfilm.other_name
+            temp_comment_box.children[1].children[1].children[0].textContent = getfilm.release_time +" / "+getfilm.directer+" / "+getfilm.screenwriter + " / "+getfilm.length + " / "+getfilm.type + " / " + getfilm.language
+            temp_comment_box.children[1].children[2].children[0].textContent = getData01[i].post_time.substr(0,10)
+            temp_comment_box.children[1].children[2].children[1].children[0].textContent = getData01[i].tags
+            temp_comment_box.children[1].children[3].textContent = getData01[i].txt
+            temp_comment_box.classList.add("comment_box")
+            temp_comment_box.children[0].addEventListener("click",() => {
+                window.location.href = MakeUrl("/subject.html?film_id="+(parseInt(getData01[i].film_id)))
+            })
+            temp_comment_box.children[1].children[0].children[0].addEventListener("click",() => {
+                window.location.href = MakeUrl("/subject.html?film_id="+(parseInt(getData01[i].film_id)))
+            })
+            
+            username_see.append(temp_comment_box)
+        }
+    }
 }
+let my_comment_more_info = document.querySelectorAll(".my_comment_more_info")
+for(let i = 0; i < my_comment_more_info.length;i++){
+    if(my_comment_more_info[i].textContent.length >115){
+        my_comment_more_info[i].textContent = my_comment_more_info[i].textContent.substr(0,114) +"..."
+    }
+}
+
 PeopleGetData()

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/tag_top.css">
-    <link rel="stylesheet" href="./css/people.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/review.css">
 </head>
 <body>
     <div id="nav">
@@ -63,48 +63,34 @@
         </div>
         <a href=""><img id="pic_r" src="pictures/index/3.png" alt="" /></a>
     </div>
-    <div id="people_content">
-        <div id="people_title">
+    <div id="review_content">
+        <div id="comment_title">牛null</div>
+        <div id="user_info">
             <img src="" id="userimg" alt="">
-            <div id="imgrightinfo">
-                <div id="username">我的电影主页</div>
-                <div id="tag_people">
-                    <div class="people_tag_choice">电影主页</div>
-                    <div class="people_tag_choice">想看</div>
-                    <div class="people_tag_choice">看过</div>
-                </div>
-            </div>
+            <span id="username">null</span>
+            <span>评论</span>
+            <span id="filmname">null</span>
+            <div class="starsAndscore"><span class="star"></span><span class="star-point">8</span></div>
+            <div id="time">null</div>
         </div>
-        <div id="userintroduction">个人简介:<span>null</span><div id="setintobox"><input id="inputintro" type="text"><div id="setIntroduction" class="pdd">修改简介</div></div></div>
-        <div id="username_kinds_info">
-            <div id="username_main">
-                <div id="user_film_want" class="user_film_kinds">
-                    <div id="want_title" class="want">想看<span>· · ·</span></div>(<span class="pos_numbers">几部</span>)
-                    <div id="want_films">
+        <div id="comment_info">null</div>
+        <div id="userfulOrno">
+            <div id="usefull" class="box05"><img class="useornoIMG" src="./pictures/review/ic_thumb_up.png" alt=""><div id="useinfo">有用<span></span></div></div>
+            <div id="nousefull" class="box05"><img class="useornoIMG" src="./pictures/review/ic_thumb_down.png" alt=""><div id="nouseinfo">没用<span></span></div></div>
+        </div>
+        <div id="resp_top">
+            <div>回应</div>
+            <div>转发</div>
+            <div>收藏</div>
+        </div>
+        <div id="response_box">
 
-                    </div>
-                </div>
-                <div id="user_film_see" class="user_film_kinds">
-                    <div id="see_title" class="want">看过<span>· · ·</span></div>(<span class="pos_numbers">几部</span>)
-                    <div id="see_films">
-
-                    </div>
-                </div>
-                <div id="my_film_comment">
-                    <div id="film_com_title" class="want">我的影评<span>· · ·</span></div>(<span class="pos_numbers">几篇</span>)
-                    <div class="film_comment_box">
-                        <img src="" alt="" class="film_img">
-                        <div class="film_right_part_box">
-                            <div class="my_comment_title">null</div>
-                            <div class="my_co_info"><span>null</span><span>评论:</span><span>null</span></div>
-                            <div class="my_comment_more_info">null啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊aaaaaaaaaaaaaaaaaaaaaaa啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="username_want">
-            </div>
-            <div id="username_see">
+        </div>
+        <div id="userRE">
+            <img src="" id="bottom_userimg" class="img" alt="">
+            <div>
+                <textarea name="" placeholder="添加回应" id="inputre" cols="30" rows="10"></textarea>
+                <button id="submit">加上去</button>
             </div>
         </div>
     </div>
@@ -118,9 +104,10 @@
             <div class="about_item">帮助中心</div>·
             <div class="about_item">移动应用</div>·
             <div class="about_item">豆瓣广告</div>
+
         </div>
     </div>
 </body>
+<script src="./js/review.js" type="module"></script>
 <script src="./js/all.js"></script>
-<script src="./js/people.js" type="module"></script>
 </html>
